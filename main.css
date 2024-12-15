@@ -22,9 +22,10 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--gray-50);
+    color: var(--gray-800);
     line-height: 1.5;
-    color: var(--gray-700);
 }
 
 .container {
@@ -38,6 +39,7 @@ header {
     background-color: var(--blue-900);
     color: white;
     padding: 4rem 0;
+    margin-bottom: 3rem;
 }
 
 .logo-container {
@@ -53,39 +55,30 @@ header {
 .hero-text {
     font-size: 1.25rem;
     text-align: center;
-    max-width: 48rem;
+    max-width: 64rem;
     margin: 0 auto;
     color: var(--blue-100);
+    padding: 0 1rem;
 }
 
 /* Main content styles */
-main {
-    padding: 4rem 0;
-}
-
 .section-title {
     font-size: 1.875rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 3rem;
     color: var(--gray-800);
+    margin-bottom: 2rem;
 }
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
 }
 
-@media (min-width: 768px) {
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .benefit-card {
-    background: white;
+    background-color: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -109,7 +102,7 @@ main {
 
 /* Features section */
 .features-section {
-    background: var(--gray-100);
+    background-color: var(--gray-100);
     padding: 2rem;
     border-radius: 0.75rem;
     margin-bottom: 4rem;
@@ -123,7 +116,7 @@ main {
 
 .feature-item {
     display: flex;
-    align-items: flex-start;
+    align-items: start;
     gap: 0.75rem;
 }
 
@@ -136,6 +129,7 @@ main {
 /* CTA section */
 .cta-section {
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .cta-text {
@@ -149,9 +143,8 @@ main {
     align-items: center;
     background-color: var(--green-600);
     color: white;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
-    font-size: 1.125rem;
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.2s;
@@ -161,12 +154,12 @@ main {
     background-color: var(--green-700);
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
     background-color: var(--gray-900);
     color: var(--gray-300);
-    margin-top: 4rem;
     padding: 2rem 0;
+    margin-top: 4rem;
 }
 
 .footer-content {
@@ -174,14 +167,30 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .building-icon {
-    color: currentColor;
+    color: var(--gray-300);
 }
 
 .footer-subtitle {
     text-align: center;
     font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.125rem;
+        white-space: normal;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
 }
