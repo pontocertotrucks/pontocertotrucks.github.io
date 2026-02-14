@@ -3,111 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Ponto Certo</title>
+    <title>Sistema Ponto Certo — Gestão de Jornada e Frota via GPS</title>
+    <meta name="description" content="Gestão de jornada e frota com dados reais do GPS. Integrações com rastreadores, compliance CLT e relatórios para fechar o mês com rastreabilidade.">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="min-h-screen bg-gray-50">
-        <!-- Hero Section -->
-        <header class="bg-blue-900 text-white">
+
+    <!-- ====== 1. NAVBAR ====== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="Logo_optimized.png" alt="Logo Ponto Certo" width="36" height="36">
+                <span>Sistema Ponto Certo</span>
+            </a>
+            <a href="https://wa.me/5543999200241" target="_blank" rel="noopener" class="btn-nav-cta">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- ====== 2. HERO ====== -->
+    <section class="hero">
+        <div class="hero-inner">
+            <img src="Logo_optimized.png" alt="Logo Sistema Ponto Certo" class="hero-logo" width="200" height="200">
+            <h1>Gestão de jornada e frota com dados reais do GPS</h1>
+            <p class="hero-subtitle">
+                Integrações com rastreadores, mapeamento veículo–motorista e relatórios de compliance para fechar o mês com rastreabilidade.
+            </p>
+            <a href="https://wa.me/5543999200241" target="_blank" rel="noopener" class="btn-hero-cta">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Fale Conosco no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- ====== 3. VALUE STRIP ====== -->
+    <section class="value-strip">
+        <div class="container">
+            <div class="value-grid">
+
+                <!-- Simples e Rápido -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <div>
+                        <h3>Simples e Rápido</h3>
+                        <p>Interface direta ao ponto, menos cliques</p>
+                    </div>
+                </div>
+
+                <!-- Proteção Trabalhista -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Proteção Trabalhista</h3>
+                        <p>Registra jornada com rastreabilidade</p>
+                    </div>
+                </div>
+
+                <!-- Conformidade CLT -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <div>
+                        <h3>Conformidade CLT</h3>
+                        <p>Horas normais, extras, noturnas, indenizatórias</p>
+                    </div>
+                </div>
+
+                <!-- Qualquer Rastreador -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Qualquer Rastreador</h3>
+                        <p>Satelital ou GSM, qualquer marca</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== 4. COMO FUNCIONA ====== -->
+    <section id="como-funciona" class="how-it-works section-padding">
+        <div class="container">
+            <h2 class="section-heading">Como Funciona</h2>
+            <p class="section-subheading">Do GPS ao relatório — em três etapas simples</p>
+
+            <div class="steps-grid">
+
+                <!-- Etapa 1 -->
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>GPS Captura</h3>
+                    <p>O rastreador do veículo registra automaticamente quando e onde o colaborador está em operação. Sem dependência de celular ou relógio de ponto.</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="step-connector" aria-hidden="true">
+                    <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12h44m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Sistema Processa</h3>
+                    <p>A jornada é montada com conformidade: horas normais, extras, noturnas e indenizatórias, tudo rastreável e alinhado à CLT e à convenção coletiva.</p>
+                </div>
+
+                <!-- Connector -->
+                <div class="step-connector" aria-hidden="true">
+                    <svg viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12h44m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Você Decide</h3>
+                    <p>Relatórios inteligentes, painel com filtros e PDF para assinatura. Menos planilha manual, mais certeza no fechamento.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== 5. FEATURES GRID ====== -->
+    <section id="funcionalidades" class="features section-padding">
+        <div class="container">
+            <h2 class="section-heading">Tudo que você precisa</h2>
+            <p class="section-subheading">Funcionalidades pensadas para quem opera frota e precisa fechar jornada com segurança</p>
+
+            <div class="features-grid">
+
+                <!-- Card 1: Jornada Automática via GPS -->
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                    </div>
+                    <h3>Jornada Automática via GPS</h3>
+                    <p>Compatível com qualquer rastreador (satelital ou GSM). Configure a captura por ignição, deslocamento, velocidade ou tempo ocioso.</p>
+                </div>
+
+                <!-- Card 2: Compliance e Conformidade -->
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
+                    <h3>Compliance e Conformidade</h3>
+                    <p>Proteção contra ações trabalhistas com rastreabilidade completa. Jornada, descanso, folgas, DSR e adicionais tratados conforme CLT e convenção coletiva.</p>
+                </div>
+
+                <!-- Card 3: Relatórios Inteligentes -->
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>Relatórios Inteligentes</h3>
+                    <p>Relatórios por período, colaborador e veículo para gestão, RH e auditoria. PDF para assinatura. Excel detalhado com paradas e endereços.</p>
+                </div>
+
+                <!-- Card 4: Painel e Dashboard -->
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    </div>
+                    <h3>Painel e Dashboard</h3>
+                    <p>Visão geral da operação com filtros por empresa, filial, veículo e colaborador. Mapa de veículos. Tempo exato parado e em direção. Alertas automáticos.</p>
+                </div>
+
+                <!-- Card 5: Integrações e Mapeamento -->
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                    </div>
+                    <h3>Integrações e Mapeamento</h3>
+                    <p>Conecta com OnixSat, TrucksControl, Global System e outros. Mapeamento veículo–colaborador com atribuição inteligente. App offline opcional.</p>
+                </div>
+
+                <!-- Card 6: Multi-empresa e Alertas WhatsApp -->
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Multi-empresa e Alertas WhatsApp</h3>
+                    <p>Opera várias empresas e filiais no mesmo ambiente. Alertas de descanso entre jornadas e pausas intrajornada via WhatsApp.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== 6. CHECKLIST ====== -->
+    <section class="checklist-section section-padding">
+        <div class="container">
+            <h2 class="section-heading">Por que o Ponto Certo?</h2>
+            <p class="section-subheading">Detalhes que fazem a diferença no dia a dia</p>
+
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Auditoria e logs — quem mudou o quê e quando</p>
+                </div>
+                <div class="checklist-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Exportação para RH e contabilidade</p>
+                </div>
+                <div class="checklist-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Relatório de telemetria do veículo (quando disponível)</p>
+                </div>
+                <div class="checklist-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Configurações por filial com governança</p>
+                </div>
+                <div class="checklist-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Implantação orientada e suporte contínuo</p>
+                </div>
+                <div class="checklist-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Interface pensada para uso diário</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== 7. CTA FINAL ====== -->
+    <section class="cta-final">
+        <h2>Pronto para fechar o mês com rastreabilidade?</h2>
+        <p>Fale com a gente e veja como o Ponto Certo se encaixa na sua operação.</p>
+        <a href="https://wa.me/5543999200241" target="_blank" rel="noopener" class="btn-cta-final">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Fale Conosco no WhatsApp
+        </a>
+    </section>
+
+    <!-- ====== 8. FOOTER ====== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Coluna 1 — Empresa -->
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="Logo_optimized.png" alt="Logo Ponto Certo" width="28" height="28">
+                        <span>Sistema Ponto Certo</span>
+                    </div>
+                    <p>Sistema Inteligente Ponto Certo Ltda.</p>
+                    <p>CNPJ: 58.138.000/0001-32</p>
+                    <p>Rua José Pileggi, 233 — Vila Santa Terezinha</p>
+                    <p>Cornélio Procópio — PR, 86300-000</p>
+                </div>
+
+                <!-- Coluna 2 — Contato -->
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p>Telefone: (43) 9 9920-0241</p>
+                    <p>Email: contato@sistemapontocerto.com.br</p>
+                    <p>WhatsApp: <a href="https://wa.me/5543999200241" target="_blank" rel="noopener">(43) 9 9920-0241</a></p>
+                </div>
+
+                <!-- Coluna 3 — Links -->
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#funcionalidades">Funcionalidades</a></li>
+                        <li><a href="https://wa.me/5543999200241" target="_blank" rel="noopener">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Barra inferior -->
+        <div class="footer-bottom">
             <div class="container">
-                <div class="logo-container">
-                    <svg height="80" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo">
-                        <g transform="translate(0, 5) scale(0.9)">
-                            <path d="M22 17H19V11H31.1714C31.5919 11 31.9799 11.2228 32.1913 11.5912L36.5247 19.2575C36.8337 19.7754 36.7366 20.4272 36.2779 20.8346L33 23.7493" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M19 35H16C14.8954 35 14 34.1046 14 33V15C14 13.8954 14.8954 13 16 13H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M39 35H41C42.1046 35 43 34.1046 43 33V23.5229C43 22.9505 42.7872 22.4012 42.4063 21.9681L37.9466 16.9728C37.3459 16.2823 36.4903 15.8889 35.5873 15.8889H33V31C33 33.2091 31.2091 35 29 35H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M25 39C27.2091 39 29 37.2091 29 35C29 32.7909 27.2091 31 25 31C22.7909 31 21 32.7909 21 35C21 37.2091 22.7909 39 25 39Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M37 39C39.2091 39 41 37.2091 41 35C41 32.7909 39.2091 31 37 31C34.7909 31 33 32.7909 33 35C33 37.2091 34.7909 39 37 39Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        <g transform="translate(35, 25) scale(0.6)">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"></circle>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                        <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="currentColor">Sistema Ponto Certo</text>
-                    </svg>
-                </div>
-                <p class="hero-text">
-                    Controle preciso do ponto dos seus motoristas, simplificando a gestão e garantindo pagamentos justos
-                </p>
+                <p>Sistema Ponto Certo &copy; 2025 — Todos os direitos reservados. Atendendo empresas em todo o Brasil.</p>
             </div>
-        </header>
+        </div>
+    </footer>
 
-        <!-- Main Content -->
-        <main class="container">
-            <h2 class="section-title">
-                Simplifique a Gestão da sua Frota
-            </h2>
-
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-header">
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7"/><path d="m6 9 6 6"/><path d="m6 15 6-6"/></svg>
-                        <h3>Cálculos Automáticos</h3>
-                    </div>
-                    <p>
-                        Folha de pagamento precisa e automática, considerando horas extras e adicional noturno.
-                    </p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-header">
-                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-                        <h3>Relatórios Mensais</h3>
-                    </div>
-                    <p>
-                        Gere relatórios detalhados para o departamento contábil e mantenha todo o histórico organizado.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Features Section -->
-            <section class="features-section">
-                <h2 class="section-title">
-                    Por que escolher o Sistema Ponto Certo?
-                </h2>
-                <div class="features-list">
-                    <div class="feature-item">
-                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <p>Conformidade total com a legislação trabalhista brasileira</p>
-                    </div>
-                    <div class="feature-item">
-                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <p>Interface intuitiva para motoristas e gestores</p>
-                    </div>
-                    <div class="feature-item">
-                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <p>Suporte técnico especializado em horário comercial</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="cta-section">
-                <h2 class="section-title">
-                    Pronto para otimizar sua gestão?
-                </h2>
-                <p class="cta-text">
-                    Entre em contato via WhatsApp e descubra como podemos ajudar sua empresa
-                </p>
-                <a href="https://wa.me/5543999200241" target="_blank" class="cta-button">
-                    Fale Conosco no WhatsApp
-                </a>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <svg class="building-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-                    <p>Sistema Ponto Certo © 2024</p>
-                </div>
-                <p class="footer-subtitle">
-                    Atendendo empresas em todo o Brasil
-                </p>
-            </div>
-        </footer>
-    </div>
 </body>
 </html>
