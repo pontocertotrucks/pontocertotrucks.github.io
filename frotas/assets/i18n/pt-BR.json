@@ -1,0 +1,276 @@
+{
+  "app": {
+    "name": "Ponto Certo Frotas",
+    "loading": "Carregando...",
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Salvar",
+    "retry": "Tentar novamente",
+    "close": "Fechar",
+    "yes": "Sim",
+    "no": "Não",
+    "ok": "OK",
+    "attention": "Atenção",
+    "datetime": {
+      "title": "Selecionar data e hora",
+      "dateLabel": "Data",
+      "timeLabel": "Hora"
+    },
+    "error": {
+      "title": "Erro",
+      "generic": "Algo deu errado. Tente novamente.",
+      "network": "Internet não disponível. O aplicativo está no modo offline.",
+      "unauthorized": "Sua sessão expirou. Faça login novamente.",
+      "server": "Falha no servidor. Tente novamente em instantes."
+    },
+    "success": {
+      "title": "Sucesso"
+    }
+  },
+  "update": {
+    "available": {
+      "title": "Nova versão disponível",
+      "message": "Uma nova versão do Ponto Certo Frotas está disponível. Atualize para aproveitar as últimas melhorias.",
+      "action": "Atualizar",
+      "later": "Mais tarde"
+    },
+    "required": {
+      "title": "Atualização obrigatória",
+      "message": "Essa versão não é mais suportada. Atualize na loja para continuar usando o Ponto Certo Frotas.",
+      "action": "Abrir loja"
+    },
+    "readyToInstall": {
+      "title": "Atualização baixada e pronta para instalar",
+      "action": "Instalar agora"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Informe seu telefone",
+      "phoneLabel": "Telefone",
+      "phonePlaceholder": "(00) 0 0000-0000",
+      "sendOtp": "Enviar Código",
+      "invalidPhone": "Por favor, digite um número de telefone válido com 11 dígitos (DDD + número).",
+      "sendError": "Falha ao enviar código. Tente novamente."
+    },
+    "otp": {
+      "title": "Informe o código",
+      "subtitle": "Digite o código de 6 dígitos enviado para",
+      "codeLabel": "Código",
+      "verify": "Entrar",
+      "resend": "Reenviar Código",
+      "resendWithTimer": "Reenviar Código ({{seconds}}s)",
+      "resendSuccess": "Código reenviado para seu telefone!",
+      "resendError": "Falha ao reenviar código. Tente novamente.",
+      "changeNumber": "Alterar Número",
+      "invalidCode": "Código inválido. Tente novamente.",
+      "expired": "Código expirado. Solicite um novo."
+    },
+    "logout": "Sair"
+  },
+  "truck": {
+    "selection": {
+      "title": "Selecione o caminhão",
+      "searchPlaceholder": "Buscar placa...",
+      "loading": "Carregando caminhões...",
+      "empty": "Nenhum caminhão encontrado",
+      "selectError": "Falha ao selecionar caminhão."
+    },
+    "switch": "Trocar caminhão",
+    "licensePlate": "Placa",
+    "empty": "Nenhum caminhão vinculado a você."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "greeting": "Olá, {{name}}",
+    "truck": "Caminhão atual",
+    "noTruck": "Nenhum caminhão selecionado.",
+    "changeTruck": "Trocar caminhão",
+    "registerTimeEntry": "Registrar Ponto",
+    "assistance": "Assistência",
+    "sync": "Sincronizar",
+    "syncNow": "Sincronizar",
+    "syncing": "Sincronizando...",
+    "syncSuccess": "Sincronização concluída com sucesso.",
+    "syncError": "Falha ao sincronizar. Verifique sua conexão com a internet e tente novamente.",
+    "syncNoDriver": "Não foi possível identificar o motorista para sincronizar.",
+    "offline": "Internet não disponível. O aplicativo está no modo offline.",
+    "lastSync": "Última sincronização",
+    "lastSyncNever": "Ainda não sincronizado",
+    "activeEntries": "Pontos abertos",
+    "noActive": "Nenhum ponto aberto.",
+    "noTypesEnabled": "Nenhum tipo de ponto habilitado para sua empresa.",
+    "openDetail": "Ver detalhes",
+    "history": "Histórico",
+    "access": "Acessar",
+    "requestNew": "Solicitar cadastro de ponto",
+    "exitTitle": "Sair",
+    "exitMessage": "Deseja sair do aplicativo?"
+  },
+  "timeEntry": {
+    "title": "Ponto",
+    "notFound": "Registro não encontrado.",
+    "loadError": "Falha ao carregar o registro.",
+    "startError": "Falha ao iniciar o ponto.",
+    "endError": "Falha ao encerrar o ponto.",
+    "gpsRequired": {
+      "title": "Localização necessária",
+      "permissionDenied": "Permita o acesso à localização nas configurações do app para registrar o ponto. Sem essa permissão não é possível continuar.",
+      "unavailable": "Não foi possível obter sua localização. Habilite o GPS do dispositivo e tente novamente. Sem o GPS ativo não é possível registrar o ponto."
+    },
+    "start": "Iniciar",
+    "end": "Finalizar",
+    "startConfirm": "Iniciar {{type}}?",
+    "endConfirm": "Finalizar ponto?",
+    "selectTruckFirst": "Selecione um caminhão antes de iniciar.",
+    "edit": "Editar",
+    "success": {
+      "ended": "Ponto encerrado com sucesso.",
+      "endedOffline": "Ponto encerrado e salvo localmente. Será sincronizado quando houver internet."
+    },
+    "history": {
+      "title": "Histórico",
+      "empty": "Nenhum ponto encontrado",
+      "pendingSync": "Pendente de envio",
+      "filters": {
+        "all": "Todos",
+        "changes": "Alterações e Solicitações",
+        "truckSwitch": "Troca de Caminhão"
+      }
+    },
+    "request": {
+      "title": "Solicitar Ponto",
+      "submit": "Enviar Solicitação",
+      "submitSuccess": "Solicitação de cadastro registrada com sucesso.",
+      "submitSuccessOffline": "Solicitação de cadastro salva localmente. Será sincronizada quando houver internet.",
+      "submitError": "Falha ao enviar a solicitação. Verifique a conexão com a internet.",
+      "userNotFound": "Usuário não encontrado.",
+      "selectTypeFirst": "Selecione um tipo de ponto.",
+      "selectTruckRequired": "Por favor, selecione um caminhão.",
+      "selectReasonRequired": "Por favor, selecione um motivo.",
+      "customReasonRequired": "Por favor, descreva o motivo da solicitação.",
+      "customReasonPlaceholder": "Descreva o motivo da solicitação...",
+      "reasonLabel": "Motivo da solicitação"
+    },
+    "type": {
+      "label": "Tipo",
+      "CLOCK_IN_CLOCK_OUT": "Expediente",
+      "LOADING_UNLOADING": "Tempo de espera",
+      "MEAL_BREAK": "Refeição",
+      "AUTOMATED_WORK_SHIFT": "Turno Automático"
+    },
+    "fields": {
+      "start": "Início",
+      "end": "Fim",
+      "duration": "Duração",
+      "truck": "Caminhão",
+      "truckPlaceholder": "Selecione um caminhão",
+      "reason": "Motivo",
+      "editReason": "Motivo da alteração",
+      "editReasonPlaceholder": "Descreva o motivo da alteração..."
+    },
+    "changeRequests": {
+      "sectionTitle": "Alterações solicitadas",
+      "customReasonRequired": "Por favor, descreva o motivo da alteração.",
+      "requestedOn": "Solicitado em",
+      "reviewedBy": "Revisado por",
+      "submitSuccess": "Solicitação de alteração registrada com sucesso.",
+      "submitSuccessOffline": "Solicitação de alteração salva localmente. Será sincronizada quando houver internet."
+    },
+    "validation": {
+      "invalidDate": "Data inválida",
+      "endBeforeStart": "O horário de fim deve ser posterior ao horário de início.",
+      "endBeforeStartAlt": "A data de fim deve ser posterior à data de início.",
+      "reasonRequired": "Por favor, selecione um motivo."
+    },
+    "status": {
+      "request": {
+        "pending": "Cadastro em Análise",
+        "approved": "Cadastro Aprovado",
+        "denied": "Cadastro Rejeitado"
+      },
+      "change": {
+        "pending": "Alteração em Análise",
+        "approved": "Alteração Aprovada",
+        "denied": "Alteração Rejeitada"
+      }
+    },
+    "reason": {
+      "CLOCK_IN_CLOCK_OUT": {
+        "forgotOpen": "Esqueci de abrir o expediente no horário real",
+        "forgotClose": "Esqueci de fechar o expediente no horário real",
+        "duplicate": "Registro duplicado de início ou fim de expediente",
+        "notConfirmed": "Registro não foi confirmado pelo aplicativo",
+        "appCrashed": "Aplicativo travou ou reiniciou durante o registro",
+        "deviceOff": "Aparelho desligou ou ficou sem bateria",
+        "operational": "Jornada encerrada por imprevisto operacional",
+        "other": "Outro"
+      },
+      "LOADING_UNLOADING": {
+        "forgotOpen": "Esqueci de abrir o tempo de espera no início real",
+        "forgotClose": "Esqueci de fechar o tempo de espera no término real",
+        "notConfirmed": "Registro não foi confirmado pelo aplicativo",
+        "appCrashed": "Aplicativo travou durante a operação",
+        "deviceOff": "Aparelho desligou ou ficou sem bateria",
+        "customerInterruption": "Operação interrompida por exigência do cliente",
+        "pausedResumed": "Operação pausada e retomada posteriormente",
+        "other": "Outro"
+      },
+      "MEAL_BREAK": {
+        "forgotOpen": "Esqueci de abrir a pausa para almoço no horário real",
+        "forgotClose": "Esqueci de fechar a pausa para almoço no horário real",
+        "notConfirmed": "Registro não foi confirmado pelo aplicativo",
+        "appCrashed": "Aplicativo travou no momento do registro",
+        "deviceOff": "Aparelho desligou ou ficou sem bateria",
+        "operationalInterruption": "Pausa interrompida por necessidade operacional",
+        "split": "Pausa fracionada em dois períodos",
+        "earlyReturn": "Retorno antecipado da pausa por orientação do gestor",
+        "other": "Outro"
+      },
+      "AUTOMATED_WORK_SHIFT": {
+        "forgotOpen": "Esqueci de abrir o expediente no horário real",
+        "forgotClose": "Esqueci de fechar o expediente no horário real",
+        "duplicate": "Registro duplicado de início ou fim de expediente",
+        "notConfirmed": "Registro não foi confirmado pelo aplicativo",
+        "appCrashed": "Aplicativo travou ou reiniciou durante o registro",
+        "deviceOff": "Aparelho desligou ou ficou sem bateria",
+        "operational": "Jornada encerrada por imprevisto operacional",
+        "other": "Outro"
+      }
+    }
+  },
+  "chat": {
+    "title": "Chat",
+    "composer": "Digite sua mensagem...",
+    "send": "Enviar",
+    "empty": "Nenhuma mensagem ainda. Envie uma mensagem para iniciar a conversa com o suporte.",
+    "support": "Suporte",
+    "you": "Você",
+    "pending": "Enviando...",
+    "delivered": "Entregue",
+    "read": "Lida",
+    "sendError": "Falha ao enviar a mensagem."
+  },
+  "account": {
+    "title": "Minha conta",
+    "driverInfo": "Dados do motorista",
+    "fullName": "Nome",
+    "phoneNumber": "Telefone",
+    "cpf": "CPF",
+    "company": "Empresa",
+    "logout": "Sair",
+    "logoutConfirm": "Tem certeza que deseja sair?",
+    "logoutError": "Falha ao sair.",
+    "preferences": "Preferências",
+    "theme": "Tema",
+    "themeLight": "Claro",
+    "themeDark": "Escuro",
+    "themeSystem": "Sistema"
+  },
+  "assistance": {
+    "title": "Assistência",
+    "chat": "Chat",
+    "requestTimeEntry": "Solicitar cadastro de ponto"
+  }
+}
