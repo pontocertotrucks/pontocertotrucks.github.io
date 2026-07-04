@@ -1,0 +1,12 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "br.com.sistemapontocerto.mobile",
+        "sha256_cert_fingerprints": [
+          "C4:B0:60:50:C9:6B:0B:32:A8:FA:CE:7B:94:DA:98:C8:CF:66:35:6F:94:EF:A0:89:6B:ED:73:CC:DE:F4:29:2C"
+        ]
+      }
+    }
+  ]

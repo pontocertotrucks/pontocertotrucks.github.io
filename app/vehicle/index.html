@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ponto Certo Frotas — Veículo</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <style>
+    :root {
+      --blue-dark: #002d5b;
+      --blue-mid: #0056b3;
+      --blue-light: #00a8e8;
+      --green: #28a745;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: linear-gradient(160deg, var(--blue-dark), var(--blue-mid));
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      max-width: 22rem;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+    .logo { font-size: 1rem; font-weight: 700; opacity: 0.9; margin-bottom: 1rem; }
+    .plate {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin: 0.5rem 0 1rem;
+      color: var(--blue-light);
+    }
+    .message { font-size: 0.95rem; line-height: 1.5; opacity: 0.85; margin-bottom: 1.5rem; }
+    .button {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 0.5rem;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .home { display: block; margin-top: 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">Ponto Certo Frotas</div>
+    <p class="plate" id="pc-plate">—</p>
+    <p class="message" id="pc-message">Redirecionando…</p>
+    <p id="pc-fallback" hidden>
+      <a class="button" id="pc-store-link" href="#">Baixar o app</a>
+    </p>
+    <a class="home" href="/">Voltar ao site</a>
+  </div>
+  <script src="/app/vehicle/landing.js"></script>
+  <script>
+    if (!window.PcVehicleLanding.run()) {
+      document.getElementById('pc-message').textContent =
+        'Escaneie o QR code colado no veículo ou acesse /app/vehicle/PLACA.';
+    }
+  </script>
+</body>
+</html>
