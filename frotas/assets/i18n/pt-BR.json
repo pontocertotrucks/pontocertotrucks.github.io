@@ -8,6 +8,7 @@
     "save": "Salvar",
     "retry": "Tentar novamente",
     "close": "Fechar",
+    "clear": "Limpar",
     "yes": "Sim",
     "no": "Não",
     "ok": "OK",
@@ -52,6 +53,7 @@
       "phonePlaceholder": "(00) 0 0000-0000",
       "sendOtp": "Enviar Código",
       "invalidPhone": "Por favor, digite um número de telefone válido com 11 dígitos (DDD + número).",
+      "phoneNotRegistered": "Este número de telefone não está cadastrado. Entre em contato com sua empresa para solicitar o acesso.",
       "sendError": "Falha ao enviar código. Tente novamente."
     },
     "otp": {
@@ -69,24 +71,10 @@
     },
     "logout": "Sair"
   },
-  "truck": {
-    "selection": {
-      "title": "Selecione o caminhão",
-      "searchPlaceholder": "Buscar placa...",
-      "loading": "Carregando caminhões...",
-      "empty": "Nenhum caminhão encontrado",
-      "selectError": "Falha ao selecionar caminhão."
-    },
-    "switch": "Trocar caminhão",
-    "licensePlate": "Placa",
-    "empty": "Nenhum caminhão vinculado a você."
-  },
   "dashboard": {
     "title": "Dashboard",
     "greeting": "Olá, {{name}}",
-    "truck": "Caminhão atual",
-    "noTruck": "Nenhum caminhão selecionado.",
-    "changeTruck": "Trocar caminhão",
+    "company": "Unidade empresarial",
     "registerTimeEntry": "Registrar Ponto",
     "assistance": "Assistência",
     "sync": "Sincronizar",
@@ -94,7 +82,7 @@
     "syncing": "Sincronizando...",
     "syncSuccess": "Sincronização concluída com sucesso.",
     "syncError": "Falha ao sincronizar. Verifique sua conexão com a internet e tente novamente.",
-    "syncNoDriver": "Não foi possível identificar o motorista para sincronizar.",
+    "syncNoDriver": "Não foi possível identificar o colaborador para sincronizar.",
     "offline": "Internet não disponível. O aplicativo está no modo offline.",
     "lastSync": "Última sincronização",
     "lastSyncNever": "Ainda não sincronizado",
@@ -105,8 +93,14 @@
     "history": "Histórico",
     "access": "Acessar",
     "requestNew": "Solicitar cadastro de ponto",
+    "scanReceipt": "Controle de combustível",
     "exitTitle": "Sair",
-    "exitMessage": "Deseja sair do aplicativo?"
+    "exitMessage": "Deseja sair do aplicativo?",
+    "vehicle": "Veículo atual",
+    "noVehicle": "Sem veículo",
+    "changeVehicle": "Trocar veículo",
+    "trips": "Viagem",
+    "selectVehicle": "Selecionar"
   },
   "timeEntry": {
     "title": "Ponto",
@@ -122,8 +116,9 @@
     "start": "Iniciar",
     "end": "Finalizar",
     "startConfirm": "Iniciar {{type}}?",
+    "startConfirmVehicle": "Veículo: {{plate}}",
+    "alreadyActive": "Você já tem um expediente aberto. Finalize-o antes de iniciar outro.",
     "endConfirm": "Finalizar ponto?",
-    "selectTruckFirst": "Selecione um caminhão antes de iniciar.",
     "edit": "Editar",
     "success": {
       "ended": "Ponto encerrado com sucesso.",
@@ -136,7 +131,7 @@
       "filters": {
         "all": "Todos",
         "changes": "Alterações e Solicitações",
-        "truckSwitch": "Troca de Caminhão"
+        "vehicleSwitch": "Troca de Veículo"
       }
     },
     "request": {
@@ -144,19 +139,20 @@
       "submit": "Enviar Solicitação",
       "submitSuccess": "Solicitação de cadastro registrada com sucesso.",
       "submitSuccessOffline": "Solicitação de cadastro salva localmente. Será sincronizada quando houver internet.",
+      "serverRejectedNote": "O servidor não aceitou este pedido de cadastro, então ele não foi enviado para análise. Nenhum ponto foi criado.",
       "submitError": "Falha ao enviar a solicitação. Verifique a conexão com a internet.",
       "userNotFound": "Usuário não encontrado.",
       "selectTypeFirst": "Selecione um tipo de ponto.",
-      "selectTruckRequired": "Por favor, selecione um caminhão.",
       "selectReasonRequired": "Por favor, selecione um motivo.",
       "customReasonRequired": "Por favor, descreva o motivo da solicitação.",
       "customReasonPlaceholder": "Descreva o motivo da solicitação...",
-      "reasonLabel": "Motivo da solicitação"
+      "reasonLabel": "Motivo da solicitação",
+      "selectVehicleRequired": "Por favor, selecione um veículo."
     },
     "type": {
       "label": "Tipo",
       "CLOCK_IN_CLOCK_OUT": "Expediente",
-      "LOADING_UNLOADING": "Tempo de espera",
+      "LOADING_UNLOADING": "Parado a serviço",
       "MEAL_BREAK": "Refeição",
       "AUTOMATED_WORK_SHIFT": "Turno Automático"
     },
@@ -164,11 +160,13 @@
       "start": "Início",
       "end": "Fim",
       "duration": "Duração",
-      "truck": "Caminhão",
-      "truckPlaceholder": "Selecione um caminhão",
       "reason": "Motivo",
       "editReason": "Motivo da alteração",
-      "editReasonPlaceholder": "Descreva o motivo da alteração..."
+      "editReasonPlaceholder": "Descreva o motivo da alteração...",
+      "vehicle": "Veículo",
+      "vehiclePlaceholder": "Selecione um veículo",
+      "startAddress": "Endereço de início",
+      "endAddress": "Endereço de fim"
     },
     "changeRequests": {
       "sectionTitle": "Alterações solicitadas",
@@ -176,7 +174,9 @@
       "requestedOn": "Solicitado em",
       "reviewedBy": "Revisado por",
       "submitSuccess": "Solicitação de alteração registrada com sucesso.",
-      "submitSuccessOffline": "Solicitação de alteração salva localmente. Será sincronizada quando houver internet."
+      "submitSuccessOffline": "Solicitação de alteração salva localmente. Será sincronizada quando houver internet.",
+      "serverRejectedNote": "O servidor não aceitou esta alteração, então ela não foi enviada para análise. O registro original continua valendo.",
+      "serverRejectedReason": "Motivo"
     },
     "validation": {
       "invalidDate": "Data inválida",
@@ -188,12 +188,14 @@
       "request": {
         "pending": "Cadastro em Análise",
         "approved": "Cadastro Aprovado",
-        "denied": "Cadastro Rejeitado"
+        "denied": "Cadastro Rejeitado",
+        "serverRejected": "Cadastro recusado pelo servidor"
       },
       "change": {
         "pending": "Alteração em Análise",
         "approved": "Alteração Aprovada",
-        "denied": "Alteração Rejeitada"
+        "denied": "Alteração Rejeitada",
+        "serverRejected": "Recusada pelo servidor"
       }
     },
     "reason": {
@@ -208,8 +210,8 @@
         "other": "Outro"
       },
       "LOADING_UNLOADING": {
-        "forgotOpen": "Esqueci de abrir o tempo de espera no início real",
-        "forgotClose": "Esqueci de fechar o tempo de espera no término real",
+        "forgotOpen": "Esqueci de abrir o período parado a serviço no início real",
+        "forgotClose": "Esqueci de fechar o período parado a serviço no término real",
         "notConfirmed": "Registro não foi confirmado pelo aplicativo",
         "appCrashed": "Aplicativo travou durante a operação",
         "deviceOff": "Aparelho desligou ou ficou sem bateria",
@@ -238,7 +240,8 @@
         "operational": "Jornada encerrada por imprevisto operacional",
         "other": "Outro"
       }
-    }
+    },
+    "selectVehicleFirst": "Selecione um veículo antes de iniciar."
   },
   "chat": {
     "title": "Chat",
@@ -252,13 +255,22 @@
     "read": "Lida",
     "sendError": "Falha ao enviar a mensagem."
   },
+  "notifications": {
+    "title": "Notificações",
+    "bell": "Abrir notificações",
+    "empty": "Nenhuma notificação por aqui.",
+    "offline": "Internet não disponível. As notificações precisam de conexão.",
+    "offlineEmpty": "Sem internet. Conecte-se para ver suas notificações.",
+    "loadError": "Não foi possível carregar as notificações. Tente novamente.",
+    "unread": "Não lida"
+  },
   "account": {
     "title": "Minha conta",
-    "driverInfo": "Dados do motorista",
+    "driverInfo": "Dados do colaborador",
     "fullName": "Nome",
     "phoneNumber": "Telefone",
     "cpf": "CPF",
-    "company": "Empresa",
+    "company": "Unidade empresarial",
     "logout": "Sair",
     "logoutConfirm": "Tem certeza que deseja sair?",
     "logoutError": "Falha ao sair.",
@@ -266,11 +278,487 @@
     "theme": "Tema",
     "themeLight": "Claro",
     "themeDark": "Escuro",
-    "themeSystem": "Sistema"
+    "themeSystem": "Sistema",
+    "debugMode": "Modo debug",
+    "debugModeHint": "Exibe detalhes técnicos quando ocorrerem falhas no app.",
+    "debugModeEnableTitle": "Ativar modo debug?",
+    "debugModeEnableMessage": "Ative somente quando solicitado pela equipe de suporte. Com essa opção ligada, o app mostrará informações técnicas sobre erros e falhas, facilitando o diagnóstico do problema que você está enfrentando.",
+    "debugModeEnableConfirm": "Ativar",
+    "switchView": "Trocar de visão",
+    "switchViewHint": "Alternar entre a visão de colaborador e o Painel de gestão."
+  },
+  "debug": {
+    "modalTitle": "Detalhes do erro",
+    "copy": "Copiar detalhes",
+    "copied": "Detalhes copiados!",
+    "close": "Fechar"
   },
   "assistance": {
     "title": "Assistência",
     "chat": "Chat",
-    "requestTimeEntry": "Solicitar cadastro de ponto"
+    "requestTimeEntry": "Solicitar cadastro de ponto",
+    "faq": "Dúvidas frequentes"
+  },
+  "help": {
+    "videos": {
+      "title": "Vídeos",
+      "watch": "Assistir vídeo",
+      "playerTitle": "Vídeo",
+      "openYoutube": "Abrir no YouTube",
+      "more": "Mais vídeos",
+      "offline": "É preciso internet para assistir aos vídeos.",
+      "notFound": "Vídeo não encontrado."
+    },
+    "title": "Dúvidas frequentes",
+    "searchPlaceholder": "Buscar dúvida...",
+    "empty": "Nenhuma dúvida encontrada. Tente outra palavra.",
+    "where": "Onde fica:"
+  },
+  "vehicle": {
+    "selection": {
+      "title": "Selecione o veículo",
+      "searchPlaceholder": "Buscar placa...",
+      "loading": "Carregando veículos...",
+      "empty": "Nenhum veículo encontrado",
+      "selectError": "Falha ao selecionar veículo.",
+      "heldBy": "Com {{holder}} desde {{since}}",
+      "none": "Sem veículo",
+      "noneHint": "Para criar rota ou editar ponto. Para iniciar uma atividade, escolha um veículo.",
+      "requiredRunning": "Você tem uma jornada em andamento. Selecione um veículo para continuar.",
+      "requiredToStart": "Selecione um veículo para iniciar esta atividade."
+    },
+    "switch": "Trocar veículo",
+    "licensePlate": "Placa",
+    "empty": "Nenhum veículo vinculado a você.",
+    "qr": {
+      "invalid": "O QR code lido não é um código de veículo válido.",
+      "plateNotLocated": "Não foi possível localizar a placa pelo QR code. Selecione o veículo abaixo.",
+      "notFound": "Nenhum veículo da sua frota corresponde a esta placa.",
+      "scanError": "Falha ao escanear o QR code. Tente novamente.",
+      "selectError": "Falha ao selecionar o veículo.",
+      "cameraRequired": "Câmera necessária",
+      "cameraRequiredMessage": "Para escanear o QR code do veículo, é necessário permitir o acesso à câmera."
+    },
+    "handover": {
+      "title": "Veículo em uso",
+      "message": "O veículo {{plate}} está com {{holder}} desde {{since}}. Deseja assumir este veículo? {{holder}} será avisado para escolher outro.",
+      "staleMessage": "A situação do veículo {{plate}} mudou: agora ele está com {{holder}} desde {{since}}. Deseja assumir este veículo? {{holder}} será avisado para escolher outro.",
+      "queuedMessage": "Você escolheu o veículo {{plate}} sem internet, mas ele está com {{holder}} desde {{since}}. Deseja assumir este veículo? {{holder}} será avisado para escolher outro.",
+      "confirm": "Assumir veículo",
+      "chooseAnother": "Escolher outro",
+      "someone": "outro motorista"
+    },
+    "lost": {
+      "title": "Seu veículo foi assumido",
+      "message": "{{driver}} assumiu o veículo {{plate}} ({{when}}). Selecione um novo veículo."
+    },
+    "switchRequest": {
+      "submitSuccess": "Solicitação de troca de veículo registrada com sucesso.",
+      "submitSuccessOffline": "Solicitação de troca de veículo salva localmente. Será sincronizada quando houver internet."
+    }
+  },
+  "receipt": {
+    "title": "Controle de combustível",
+    "description": "Leia o QR Code do cupom fiscal de combustível e envie para a empresa.",
+    "scanButton": "Escanear QR Code",
+    "preparing": "Preparando o leitor de QR Code...",
+    "preparingHint": "Isso acontece só na primeira vez: o celular baixa o leitor do Google. Leva alguns segundos.",
+    "scanning": "Abrindo câmera...",
+    "submitting": "Enviando nota...",
+    "successTitle": "Nota registrada!",
+    "successMessage": "A nota fiscal foi enviada com sucesso.",
+    "errorScan": "Falha ao escanear. Tente novamente.",
+    "errorModule": "Não foi possível preparar o leitor de QR Code. Verifique a internet e tente novamente.",
+    "errorSubmit": "Falha ao enviar a nota. Verifique sua conexão.",
+    "errorLoad": "Falha ao carregar notas fiscais.",
+    "scanAgain": "Escanear outra",
+    "sentReceipts": "Notas enviadas",
+    "noReceipts": "Nenhuma nota fiscal enviada ainda.",
+    "cameraRequired": "Câmera necessária",
+    "cameraRequiredMessage": "Para escanear notas fiscais, é necessário permitir o acesso à câmera do dispositivo.",
+    "manualUrlButton": "Digitar URL manualmente",
+    "manualUrlTitle": "Digitar URL",
+    "manualUrlMessage": "Insira a URL da nota fiscal abaixo:",
+    "manualUrlPlaceholder": "https://...",
+    "scannedTitle": "Nota Recebida!",
+    "scannedMessage": "A nota fiscal foi lida com sucesso. O que deseja fazer?",
+    "previewButton": "Ver nota fiscal",
+    "confirmTitle": "Confirmar Nota Fiscal",
+    "confirmMessage": "Deseja enviar esta nota fiscal para o sistema?",
+    "confirmSend": "Enviar nota",
+    "cancelSend": "Cancelar",
+    "viewReceipt": "Ver nota fiscal",
+    "invalidQrCode": "O QR code lido não contém uma URL válida de nota fiscal.",
+    "sentAt": "Enviada em",
+    "errorDetails": "Detalhes do Erro",
+    "copyDetails": "Copiar Detalhes",
+    "detailsCopied": "Detalhes copiados com sucesso!",
+    "showErrorDetails": "Exibir detalhes técnicos do erro",
+    "hideErrorDetails": "Ocultar detalhes técnicos"
+  },
+  "trip": {
+    "title": "Minhas Viagens",
+    "description": "Cadastre suas viagens informando o endereço de partida e destino.",
+    "newTrip": "Nova viagem",
+    "createTitle": "Nova viagem",
+    "createSubtitle": "Defina origem e destino da sua viagem",
+    "startPoint": "Ponto de partida",
+    "endPoint": "Seu destino",
+    "mapFullscreen": "Ver mapa em tela cheia",
+    "securityNote": "Seus dados estão protegidos e são sincronizados com segurança",
+    "createRoute": "Criar viagem",
+    "routesBanner": "Gerencie suas viagens cadastradas e acesse origem e destino com rapidez.",
+    "searchPlaceholder": "Buscar viagens...",
+    "syncBanner": "Suas viagens estão sincronizadas com segurança entre seus dispositivos.",
+    "origin": "Origem",
+    "destination": "Destino",
+    "distance": "Distância",
+    "openActions": "Abrir ações da viagem",
+    "useRoute": "Usar esta viagem",
+    "removeRoute": "Remover viagem",
+    "pendingSync": "Aguardando sincronização",
+    "filters": {
+      "title": "Filtrar viagens",
+      "available": "Disponíveis",
+      "completed": "Finalizadas",
+      "cancelled": "Canceladas"
+    },
+    "emptyAvailable": "Nenhuma viagem disponível ainda.",
+    "emptyCompleted": "Nenhuma viagem finalizada ainda.",
+    "emptyCancelled": "Nenhuma viagem cancelada ainda.",
+    "fromWhere": "De onde?",
+    "toWhere": "Para onde?",
+    "fromWherePlaceholder": "Empresa, rua ou local",
+    "toWherePlaceholder": "Empresa, rua ou local",
+    "clearAddress": "Limpar endereço",
+    "useMyLocation": "Usar minha localização",
+    "pickOnMap": "Marcar no mapa",
+    "startAddress": "Endereço de início",
+    "endAddress": "Endereço de destino",
+    "startAddressPlaceholder": "Digite o endereço de partida...",
+    "endAddressPlaceholder": "Digite o endereço de destino...",
+    "save": "Salvar Viagem",
+    "saving": "Salvando viagem...",
+    "successTitle": "Viagem cadastrada!",
+    "successMessage": "A viagem foi registrada com sucesso.",
+    "errorSubmit": "Falha ao cadastrar a viagem. Verifique sua conexão.",
+    "errorGps": "Não foi possível obter sua localização por GPS.",
+    "errorLoad": "Falha ao carregar viagens.",
+    "errorStart": "Não foi possível iniciar a viagem.",
+    "errorEnd": "Não foi possível finalizar a viagem.",
+    "errorCancel": "Não foi possível cancelar a viagem.",
+    "errorDelete": "Não foi possível excluir a viagem.",
+    "noTrips": "Nenhuma viagem cadastrada ainda.",
+    "tripList": "Viagens cadastradas",
+    "createAnother": "Cadastrar outra",
+    "backToList": "Voltar para lista",
+    "from": "De",
+    "to": "Para",
+    "createdAt": "Cadastrada em",
+    "searching": "Buscando locais...",
+    "noResults": "Nenhum endereço encontrado.",
+    "cepOficial": "CEP conferido nos Correios",
+    "addressRequired": "Preencha origem e destino para salvar.",
+    "cancel": "Cancelar",
+    "cancelTrip": "Cancelar viagem",
+    "confirm": "Confirmar",
+    "start": "Iniciar viagem",
+    "end": "Finalizar viagem",
+    "delete": "Excluir",
+    "finished": "Finalizada",
+    "dragPin": "Mova o mapa para escolher o local",
+    "startConfirm": "Deseja iniciar esta viagem?",
+    "endConfirm": "Deseja finalizar esta viagem?",
+    "cancelConfirm": "Deseja cancelar esta viagem em andamento?",
+    "deleteConfirm": "Deseja excluir esta viagem?",
+    "status": {
+      "draft": "Aguardando início",
+      "in_progress": "Em andamento",
+      "ended": "Finalizada",
+      "cancelled": "Cancelada"
+    },
+    "success": {
+      "started": "Viagem iniciada!",
+      "ended": "Viagem finalizada!",
+      "endedOffline": "Viagem finalizada (sem conexão).",
+      "cancelled": "Viagem cancelada.",
+      "deleted": "Viagem excluída."
+    },
+    "favorites": {
+      "title": "Viagens favoritas",
+      "openPicker": "Usar viagem favorita",
+      "modalTitle": "Viagens favoritas",
+      "select": "Usar esta viagem",
+      "empty": "Nenhuma viagem favorita ainda.",
+      "save": "Salvar como viagem favorita",
+      "saveHint": "Use novamente nos próximos registros.",
+      "labelPlaceholder": "Apelido da viagem (ex.: São Paulo → Santos)",
+      "remove": "Remover viagem"
+    }
+  },
+  "viewSelection": {
+    "greeting": "Olá, {{name}}",
+    "title": "Como você quer entrar?",
+    "subtitle": "Sua conta tem acesso a duas visões do aplicativo. Escolha uma para continuar.",
+    "driver": {
+      "title": "Colaborador",
+      "hint": "Registrar ponto, viagens e assistência."
+    },
+    "fleetManager": {
+      "title": "Painel de gestão",
+      "hint": "Acompanhar a operação, alertas, aprovações e viagens, conforme o seu cargo no painel."
+    },
+    "note": "Você pode trocar de visão a qualquer momento em \"Minha conta\"."
+  },
+  "fleet": {
+    "brand": "Painel de gestão",
+    "nav": {
+      "home": "Início",
+      "alerts": "Alertas",
+      "approvals": "Aprovações",
+      "trips": "Viagens",
+      "more": "Mais"
+    },
+    "context": {
+      "allUnits": "Todas as unidades",
+      "allTeams": "Todas as turmas"
+    },
+    "common": {
+      "loadError": "Não foi possível carregar. Tente novamente.",
+      "forbidden": "Seu cargo não tem acesso a esta área.",
+      "retry": "Tentar novamente",
+      "offline": "Internet não disponível. Os dados podem estar desatualizados.",
+      "loading": "Carregando...",
+      "loadMore": "Carregar mais",
+      "all": "Todos",
+      "dateFrom": "De",
+      "dateTo": "Até",
+      "anyDate": "Qualquer data"
+    },
+    "home": {
+      "greeting": "Olá, {{name}}",
+      "company": "Empresa",
+      "noOverview": "Seu cargo não inclui a Visão Geral. Use as abas abaixo para as áreas liberadas.",
+      "partial": "Parte dos indicadores não pôde ser carregada agora.",
+      "kpi": {
+        "fleet": "Frota",
+        "fleetSub": "ativos de {{total}} veículos",
+        "fleetMoving": "{{count}} em movimento",
+        "team": "Equipe em operação",
+        "teamSub": "de {{total}} colaboradores ativos",
+        "teamDriving": "{{count}} em viagem",
+        "trips": "Movimento do dia",
+        "tripsSub": "viagens em andamento",
+        "tripsStarted": "{{count}} iniciadas hoje",
+        "pending": "Pendências",
+        "pendingCorrections": "{{count}} correção(ões) de ponto",
+        "pendingSwitches": "{{count}} troca(s) de veículo",
+        "journeyAlerts": "Alertas de jornada",
+        "journeyAttention": "{{count}} em atenção",
+        "journeyCritical": "{{count}} em infração",
+        "alerts": "Alertas",
+        "alertsSub": "alertas do sistema não lidos",
+        "messages": "Mensagens",
+        "messagesSub": "mensagens não lidas dos colaboradores"
+      },
+      "mapTitle": "Mapa da Operação",
+      "legendGray": "Sem transmitir ou sem dados",
+      "mapLabel": "{{moving}} em movimento - {{notTransmitting}} sem transmitir",
+      "activeTrips": "Viagens ativas",
+      "seeAll": "Ver todas",
+      "noActiveTrips": "Nenhuma viagem em andamento agora.",
+      "recentActivities": "Atividades recentes",
+      "noActivities": "Nenhuma atividade hoje.",
+      "mapFullscreen": "Ver mapa em tela cheia",
+      "vehicleList": "Lista de veículos",
+      "currentTrip": "Viagem em andamento",
+      "noTrip": "Sem viagem em andamento no momento.",
+      "speed": "{{speed}} km/h",
+      "seeVehicles": "Ver os {{count}} veículos com posição",
+      "access": "Acessar"
+    },
+    "alerts": {
+      "title": "Alertas",
+      "note": "A configuração dos alertas (e de quem recebe aviso no celular) continua no Painel do Cliente, em Configurar alertas.",
+      "sources": {
+        "system": "Sistema",
+        "journey": "Jornada"
+      },
+      "tabs": {
+        "active": "Ativos",
+        "archived": "Arquivados"
+      },
+      "journeySeverity": {
+        "CRITICO": "Crítico",
+        "ATENCAO": "Atenção",
+        "INFORMACAO": "Informação"
+      },
+      "markAllRead": "Marcar todos como lidos",
+      "archive": "Arquivar",
+      "empty": "Nenhum alerta neste período.",
+      "emptyInbox": "Nenhum alerta em aberto.",
+      "outsidePeriodOne": "1 alerta não lido fora deste período.",
+      "outsidePeriodMany": "{{count}} alertas não lidos fora deste período.",
+      "seeAll": "Ver todos",
+      "unread": "Não lido",
+      "occurrences": "{{count}} ocorrências"
+    },
+    "approvals": {
+      "title": "Aprovações",
+      "subtitle": "Solicitações dos colaboradores aguardando sua decisão",
+      "filters": {
+        "pending": "Pendentes",
+        "approved": "Aprovadas",
+        "denied": "Rejeitadas",
+        "all": "Todas",
+        "cancelled": "Canceladas"
+      },
+      "approve": "Aprovar",
+      "reject": "Rejeitar",
+      "confirmApproveTitle": "Confirmar aprovação",
+      "confirmApproveMessage": "Aprovar a solicitação de {{name}}? Esta ação fica registrada.",
+      "confirmRejectTitle": "Confirmar rejeição",
+      "confirmRejectMessage": "Rejeitar a solicitação de {{name}}? Esta ação fica registrada.",
+      "notesPlaceholder": "Motivo (opcional)",
+      "approved": "Solicitação aprovada.",
+      "rejected": "Solicitação rejeitada.",
+      "alreadyDecided": "Este pedido já foi resolvido. A lista mostra a decisão que está valendo.",
+      "forbidden": "Seu cargo não tem permissão para esta decisão.",
+      "error": "Não foi possível registrar a decisão. Tente novamente.",
+      "empty": "Nenhuma solicitação neste filtro.",
+      "outsidePeriodOne": "1 solicitação pendente fora deste período.",
+      "outsidePeriodMany": "{{count}} solicitações pendentes fora deste período.",
+      "seeAll": "Ver todas"
+    },
+    "trips": {
+      "title": "Viagens",
+      "sections": {
+        "active": "Em andamento",
+        "drafts": "Aguardando início",
+        "history": "Histórico"
+      },
+      "waiting": "Aguardando início",
+      "create": "Nova viagem",
+      "delete": "Excluir",
+      "deleteConfirmTitle": "Excluir viagem",
+      "deleteConfirmMessage": "Excluir esta viagem que ainda está aguardando início?",
+      "deleted": "Viagem excluída.",
+      "forbidden": "Seu cargo não tem permissão para esta ação.",
+      "error": "Não foi possível concluir. Tente novamente.",
+      "empty": {
+        "active": "Nenhuma viagem em andamento neste recorte.",
+        "drafts": "Nenhuma viagem aguardando início neste recorte.",
+        "history": "Nenhuma viagem encerrada neste período."
+      },
+      "createdAt": "criada {{time}}",
+      "endedAt": "encerrada {{time}}"
+    },
+    "tripCreate": {
+      "title": "Nova viagem",
+      "note": "A viagem é criada para o colaborador e fica aguardando início no aplicativo dele. As rotas favoritas continuam sendo do colaborador.",
+      "unit": "Unidade Empresarial",
+      "team": "Turma",
+      "collaborator": "Colaborador",
+      "collaboratorPlaceholder": "Selecione o colaborador",
+      "noCollaborators": "Nenhum colaborador ativo neste recorte.",
+      "favoritesTitle": "Rotas favoritas de {{name}}",
+      "favoritesHint": "A lista pertence ao colaborador e é a mesma usada no aplicativo dele.",
+      "favoritesOwner": "do colaborador",
+      "favoritePlaceholder": "Selecione uma rota favorita",
+      "useFavorite": "Usar favorita",
+      "noFavorites": "Este colaborador ainda não tem rotas favoritas.",
+      "favoriteApplied": "Origem e destino preenchidos pela favorita do colaborador.",
+      "favoriteMissing": "Selecione uma rota favorita do colaborador.",
+      "fromWhere": "De onde?",
+      "toWhere": "Para onde?",
+      "addressPlaceholder": "Empresa, rua ou local",
+      "searchHint": "Busca a partir de 3 letras ou marcação no mapa.",
+      "pickOnMap": "Marcar no mapa",
+      "saveFavorite": "Salvar rota nas favoritas do colaborador",
+      "saveFavoriteHint": "Ao criar, esta rota passa a aparecer nas favoritas de {{name}} no aplicativo dele.",
+      "favoriteLabelPlaceholder": "Apelido da rota (opcional)",
+      "submit": "Criar viagem",
+      "footnote": "A viagem nasce aguardando início e aparece no aplicativo do colaborador. O colaborador inicia.",
+      "missingFields": "Escolha o colaborador e informe origem e destino.",
+      "created": "Viagem criada. Ela aparece no aplicativo do colaborador, aguardando início.",
+      "createdWithFavorite": "Viagem criada e rota salva nas favoritas do colaborador.",
+      "forbidden": "Seu cargo não tem permissão para criar viagens.",
+      "error": "Não foi possível criar a viagem. Tente novamente.",
+      "searching": "Buscando locais...",
+      "noResults": "Nenhum endereço encontrado."
+    },
+    "more": {
+      "title": "Mais",
+      "messages": "Mensagens",
+      "messagesHint": "Conversas com colaboradores",
+      "collaborators": "Colaboradores",
+      "collaboratorsHint": "Status dos colaboradores",
+      "vehicles": "Veículos",
+      "vehiclesHint": "Status dos veículos",
+      "help": "Dúvidas frequentes",
+      "helpHint": "Respostas sobre cada tela do app",
+      "account": "Minha conta",
+      "accountHint": "Dados, empresa e sair",
+      "note": "Cadastros, relatórios, jornadas e configurações continuam no Painel do Cliente."
+    },
+    "messages": {
+      "title": "Mensagens",
+      "searchPlaceholder": "Buscar colaborador...",
+      "empty": "Nenhuma conversa neste recorte.",
+      "unread": "Não lida",
+      "unreadCount": "{{count}} não lida(s)",
+      "reply": "Resposta: ",
+      "audio": "Mensagem de áudio"
+    },
+    "notifications": {
+      "title": "Notificações",
+      "empty": "Nenhuma notificação por aqui.",
+      "emptyHint": "Os alertas em que você está marcado com o canal \"App Ponto Certo\", no Configurar alertas do painel, chegam aqui.",
+      "unread": "Não lida"
+    },
+    "chat": {
+      "composer": "Digite sua resposta...",
+      "send": "Enviar",
+      "empty": "Nenhuma mensagem nesta conversa.",
+      "sendError": "Falha ao enviar a mensagem."
+    },
+    "collaborators": {
+      "title": "Status dos colaboradores",
+      "empty": "Nenhum colaborador neste recorte.",
+      "start": "Início",
+      "break": "Intervalo",
+      "end": "Fim",
+      "updatedAt": "Atualizado {{time}}",
+      "noVehicle": "sem veículo"
+    },
+    "vehicles": {
+      "title": "Status dos veículos",
+      "searchPlaceholder": "Buscar placa ou modelo...",
+      "summary": "{{active}} ativos de {{total}} veículos",
+      "state": {
+        "em_movimento": "Em movimento",
+        "ligado_parado": "Ligado parado",
+        "desligado": "Desligado",
+        "sem_transmitir": "Sem transmitir",
+        "indeterminado": "Não classificado"
+      },
+      "noDriver": "sem motorista atual",
+      "lastMessage": "Última mensagem {{time}}",
+      "inconsistent": "dados inconsistentes",
+      "empty": "Nenhum veículo para este filtro."
+    },
+    "account": {
+      "title": "Minha conta",
+      "userInfo": "Seus dados",
+      "name": "Nome",
+      "role": "Cargo",
+      "email": "E-mail",
+      "company": "Empresa",
+      "permissionsNote": "O que você vê e pode fazer aqui é o que o seu cargo libera no Painel do Cliente.",
+      "switchView": "Trocar de visão",
+      "logout": "Sair",
+      "logoutConfirm": "Tem certeza que deseja sair?",
+      "logoutError": "Falha ao sair."
+    }
   }
 }
