@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "TEAM_ID.br.com.sistemapontocerto.mobile",
+        "appID": "7G848WTL6N.br.com.sistemapontocerto.mobile",
         "paths": ["/app/vehicle", "/app/vehicle/*"]
       }
     ]

@@ -28,9 +28,9 @@ O `404.html` na raiz é **obrigatório** para rotas com placa no path.
 ## App Links (já na raiz do repo)
 
 - `/.well-known/assetlinks.json` — SHA-256 já preenchido
-- `/.well-known/apple-app-site-association` — substituir `TEAM_ID` pelo Team ID Apple
+- `/.well-known/apple-app-site-association` — Team ID `7G848WTL6N` preenchido
+- `/.nojekyll` — sem ele o GitHub Pages ignora a pasta `.well-known` (404)
 
 ## Pendente
 
 1. **App Store ID** — em `landing.js`, trocar `APP_STORE` pela URL `https://apps.apple.com/br/app/idXXXXXXXXX` quando o app estiver publicado.
-2. **Team ID** no `apple-app-site-association`.
